@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="./assets/logo.png" alt="logo" class="logo" /></a>
+      <div>
+        <ul id="Nav-bar">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./shop.html">shop</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./sign-up.html" class="active">Sign-in</a></li>
+          <a href="#"><i class="fa-solid fa-xmark" id="close"></i></a>
+          <li>
+            <a href="./cart.html"
+              ><i id="lg-bag" class="fa-solid fa-bag-shopping"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="./cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up Form</title>
+        <style>
+          /* Basic CSS Reset */
+          * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+
+          /* Body styles */
+          @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "League Spartan", sans-serif;
+          }
+          body {
+            background-color: #e3e6f3;
+          }
+          /* Card styles */
+          .card {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+            margin-left: 550px;
+            margin-top: 70px;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+          }
+
+          /* Form styles */
+          h2 {
+            text-align: center;
+            font-size: 48px;
+          }
+          .card {
+            background-color: #d0d7f7;
+          }
+          .card form {
+            display: flex;
+            flex-direction: column;
+            background-color: #d0d7f7;
+          }
+          .card form label {
+            font-size: 20px;
+            font-weight: 200;
+          }
+
+          .card form label,
+          .card form input {
+            margin-bottom: 10px;
+          }
+
+          .card form input[type="text"],
+          .card form input[type="email"],
+          .card form input[type="password"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            font-size: 20px;
+            transition: 0.3s ease-in-out;
+          }
+
+          .card form input[type="text"]:focus,
+          .card form input[type="email"]:focus,
+          .card form input[type="password"]:focus {
+            outline: none;
+            border-color: #66afe9;
+          }
+
+          .card form button {
+            background-color: #ff5d8d;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+          }
+
+          .card form button:hover {
+            background-color: #f7044d;
+          }
+          .Already {
+            margin-right: 10px;
+          }
+          .messageDiv {
+            background-color: #ff5d8d;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            opacity: 0;
+            animation: fadeout 7s forwards;
+          }
+          @media (max-width: 768px) {
+            .card {
+              width: 80%;
+              margin: 20px auto;
+              padding: 10px;
+            }
+            h2 {
+              font-size: 36px;
+            }
+            .card form label,
+            .card form input {
+              font-size: 16px;
+            }
+            .card form input[type="text"],
+            .card form input[type="email"],
+            .card form input[type="password"] {
+              font-size: 16px;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .card {
+              width: 90%;
+              display: flex;
+              justify-content: center;
+              position: absolute;
+              left: 5%;
+              top: 20%;
+              margin: 10px auto;
+              padding: 10px;
+            }
+            h2 {
+              font-size: 28px;
+            }
+            .card form label,
+            .card form input {
+              font-size: 14px;
+            }
+            .card form input[type="text"],
+            .card form input[type="email"],
+            .card form input[type="password"] {
+              font-size: 14px;
+            }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="card">
+          <h2>Sign Up</h2>
+          <form action="#">
+            <div id="signUpMessage" class="messageDiv"></div>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" required />
+
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email-input-signup" name="email" required />
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password-input-signup"
+              name="password"
+              required
+            />
+
+            <button id="btn">Sign Up</button>
+            <p class="Already">Already have an account ?</p>
+            <a href="./login.html">Log-in</a>
+          </form>
+        </div>
+        <script type="module" src="firebaseauth.js"></script>
+        <script src="./script.js"></script>
+      </body>
+    </html>
+  </body>
+</html>

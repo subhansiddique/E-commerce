@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body class="body">
+    <section id="header">
+      <a href="#"><img src="./assets/logo.png" alt="logo" class="logo" /></a>
+      <div>
+        <ul id="Nav-bar">
+          <li><a href="./index.html" >Home</a></li>
+          <li><a href="./shop.html">shop</a></li>
+          <li><a href="./blog.html" >Blog</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./sign-up.html" class="active"  >Sign-in</a></li>
+          <a href="#"><i class="fa-solid fa-xmark" id="close"></i></a>
+          <li>
+            <a href="./cart.html"
+              ><i id="lg-bag" class="fa-solid fa-bag-shopping"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="./cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+    <div class="container">
+        <div class="form-login">
+          <h1 c class="heading">Login</h1>
+          <div id="signUpMessage" class="messageDiv"></div>
+          <p>E-mail/Username</p>
+          <input target id="email-input" type="email"/>
+          <p>password</p>
+          <input id="password-input" type="password" />
+          <br/><button id="btn-log-in">Sign-in</button>
+        </div>
+      </div>
+    </div>
+<script type="module" src="./firbaselogin.js"></script>
+<script src="./script.js"></script>
+  </body>
+</html>
